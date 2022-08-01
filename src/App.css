@@ -1,0 +1,108 @@
+.c-stepper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c-stepper__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.c-stepper__item__content{
+  background-color: red;
+  height: 25px;
+  width: 25px;
+  margin: auto;
+  margin-top: 13px;
+  position: relative;
+  border-radius: 50%;
+  z-index: 1;
+  object-fit:fill;
+  background-repeat: no-repeat;
+
+}
+
+/* .c-stepper__item:before { */
+    /* --size: 3rem; */
+    /* content: "1";
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 70px;
+    border:1px solid #707070;
+    margin: 1rem auto 0;
+    background-color: #E9E9ED; */
+    
+    /* border-radius: 10px */
+    /* opacity: 50%; */
+/* } */
+
+.c-stepper__item:not(:last-child):after {
+    content: "";
+    position: relative;
+    top: 1.5rem;
+    left: 50%;
+    height: 2px;
+    background-color: #e0e0e0;
+    order: -1;
+}
+
+.c-stepper__item__selected {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.c-stepper__item__selected:before {
+    /* --size: 3rem; */
+    content: "";
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin: 1rem auto 0;
+    /* background-color: red; */
+    background-image: url('./assets/TimelineTick.svg');
+
+    /* opacity: 50%; */
+}
+
+
+.c-stepper__item__selected:not(:last-child):after {
+    content: "";
+    position: relative;
+    top: 1.5rem;
+    left: 50%;
+    height: 2px;
+    background-color: red;
+    order: -1;
+}
+
+
+
+
+/* .c-stepper__item__number:before { */
+  /* --size: 3rem; */
+  /* content: "";
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 70px;
+  border:1px solid #707070;
+  margin: 1rem auto 0;
+  background-color: #E9E9ED; */
+  
+  /* border-radius: 10px */
+  /* opacity: 50%; */
+/* } */
+
+
